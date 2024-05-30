@@ -3,17 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Sky Property</title>
+    <title>About Us - SKY Properties</title>
     <!-- Link to Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
     <style>
         .navbar-custom {
-            background-color: #0b2361; /* Dark blue color for the navbar */
+            background: linear-gradient(to right, #ffffff, #0b2361); /* Gradient from white to dark blue */
         }
         .navbar-custom .navbar-brand, 
         .navbar-custom .navbar-nav .nav-link {
-            color: white; /* White text for navbar items */
+            color: #0b2361; /* Dark blue text for navbar items */
+        }
+        .navbar-custom .navbar-toggler {
+            border-color: #0b2361; /* Dark blue border for the toggler */
+        }
+        .navbar-custom .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%230b2361' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
         }
         .navbar-custom .navbar-brand img {
             height: 50px; /* Logo height */
@@ -24,12 +30,18 @@
         #about {
             background-color: #ffffff; /* White background for the About section */
             color: #0b2361; /* Dark blue text for the About section */
+            line-height: 1.6; /* Line spacing for the About section */
         }
         #services {
             background-color: #e9ecef; /* Light grey background for the Services section */
+            margin-top: 20px; /* Space between sections */
         }
         #services h4 {
             color: #0b2361; /* Dark blue color for service titles */
+        }
+        #services p {
+            color: #0b2361; /* Dark blue text for service descriptions */
+            line-height: 1.6; /* Line spacing for service descriptions */
         }
         #contact {
             background-color: #0b2361; /* Dark blue background for the Contact section */
@@ -51,22 +63,21 @@
         }
         .carousel-item img {
             width: 100%;
-            height: auto; /* Maintain aspect ratio */
+            height: auto; /* Auto height for the images */
+            object-fit: cover; /* Ensures the image covers the entire area of the slider */
         }
-		 .carousel-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover; /* Ensures the image covers the entire area of the slider */
-    }
+		.navbar-custom .navbar-brand img {
+    height: 75px; /* Increase the height of the logo */
+}
     </style>
 </head>
 <body>
 
 <!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-custom">
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
   <a class="navbar-brand" href="#">
-    <img src="img/logo.png" alt="Sky Property Logo" height="50">
-    Sky Property
+    <img src="img/logo.png" alt="SKY Properties Logo" height="50">
+    SKY Properties
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -89,17 +100,20 @@
   </div>
 </nav>
 
+<!-- Adjusted margin for the fixed navbar -->
+<div style="margin-top: 80px;"></div>
+
 <!-- Slider -->
 <div id="slider" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="img/2.jpg" class="d-block w-100" alt="Slide 1">
+      <img src="img/1.jpg" class="d-block w-100" alt="Slide 1">
     </div>
     <div class="carousel-item">
       <img src="img/2.jpg" class="d-block w-100" alt="Slide 2">
     </div>
     <div class="carousel-item">
-      <img src="img/2.jpg" class="d-block w-100" alt="Slide 3">
+      <img src="img/3.jpg" class="d-block w-100" alt="Slide 3">
     </div>
   </div>
 </div>
@@ -107,8 +121,8 @@
 <!-- About Us Section -->
 <section id="about" class="py-5">
   <div class="container">
-    <h2 class="text-center">About Sky Property</h2>
-    <p class="lead text-center">Sky Property is a real estate company based in the UAE, dedicated to helping customers buy, sell, and rent apartments.</p>
+    <h2 class="text-center">About SKY Properties</h2>
+     <p>SKY Properties was established in 2019, specializing in buying, selling and leasing properties. We have a team of property consultants with high professionalism and extensive experience over 20 years in the real estate market, whether in Re-Sale, Off-Plan or Property Management & Leasing. Our principles start with credibility and transparency and do not end with quality. We always strive to understand customer requirements, study the market very carefully, build trust and create a long-term relationship. Happy To Serve You</p>
   </div>
 </section>
 
@@ -116,21 +130,25 @@
 <section id="services" class="bg-light py-5">
   <div class="container">
     <h2 class="text-center">Our Services</h2>
-    <div class="row text-center">
-      <div class="col-md-4">
-        <img src="img/service1.png" alt="Service 1" class="img-fluid mb-3">
-        <h4>Buying Apartments</h4>
-        <p>We help you find your dream apartment with ease and confidence.</p>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h4>Buying a Property</h4>
+        <p>If you are planning to buy a property in Dubai, we at SKY Properties search for the best opportunities and options that suit your aspirations, offer you the best solutions, and provide you with a feasibility study for your investment. All this without any charges. Do not hesitate to contact us ... Your Property Consultant from SKY Properties is waiting for your action.</p>
       </div>
-      <div class="col-md-4">
-        <img src="img/service2.png" alt="Service 2" class="img-fluid mb-3">
-        <h4>Selling Apartments</h4>
-        <p>We assist in selling your property at the best market value.</p>
+      <div class="col-md-6">
+        <h4>Selling a Property
+      </h4>
+        <p>If you want to sell your property, SKY Properties is pleased to provide you with the best marketing services in order to reach the largest segment of clients to ensure that you will get the best deal. We work with high professionalism, transparency, and credibility. We are working for your comfort and benefit. Call now to feel the quality of our work. Your Property Consultant from SKY Properties is waiting for your call.</p>
       </div>
-      <div class="col-md-4">
-        <img src="img/service3.png" alt="Service 3" class="img-fluid mb-3">
-        <h4>Renting Apartments</h4>
-        <p>We provide rental services to match you with the perfect tenants.</p>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-6">
+        <h4>Renting a New Home</h4>
+        <p>If you are planning to move to Dubai, or want to change your home, we can help you find the best options available. Contact us now, your Property Consultant from SKY Properties will offer you multiple options suitable for your budget.</p>
+      </div>
+      <div class="col-md-6">
+        <h4>Property Owners</h4>
+        <p>We at SKY Properties are pleased to provide you a full service, whether for lease out or sale of your property. We provide a complete study and multiple options in order to reach the best deals. We also do Property Management and follow up on all for preparing lease agreements and handing over the property to the tenant. Take peace of mind, just contact your property consultant from SKY Properties and you will find the best services ever.</p>
       </div>
     </div>
   </div>
@@ -158,7 +176,7 @@
 <!-- Footer -->
 <footer class="bg-dark text-white text-center py-4">
   <div class="container">
-    <p>&copy; 2024 Sky Property</p>
+    <p>&copy; 2024 SKY Properties</p>
   </div>
 </footer>
 

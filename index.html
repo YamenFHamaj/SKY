@@ -46,37 +46,135 @@
         #contact {
             background-color: #0b2361; /* Dark blue background for the Contact section */
             color: white; /* White text for the Contact section */
+            padding: 40px 0;
         }
-        #contact .btn-success, 
-        #contact .btn-primary, 
-        #contact .btn-danger {
+        .map-container {
+            position: relative;
+            padding-bottom: 30%; /* Adjusted padding for smaller map */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            color: white;
             margin: 10px;
         }
-        #contact .btn-success img, 
-        #contact .btn-primary img, 
-        #contact .btn-danger img {
-            margin-right: 5px;
+        .contact-info div img {
+            margin-right: 10px;
         }
         footer {
             background-color: #0b2361; /* Dark blue background for the footer */
             color: white; /* White text for the footer */
+            padding: 20px 0;
+        }
+        .navbar-custom .navbar-brand img {
+            height: 75px; /* Increase the height of the logo */
         }
         .carousel-item img {
             width: 100%;
             height: auto; /* Auto height for the images */
             object-fit: cover; /* Ensures the image covers the entire area of the slider */
         }
-		.navbar-custom .navbar-brand img {
-    height: 75px; /* Increase the height of the logo */
+        /* Remove background from email, WhatsApp, and YouTube buttons */
+        .btn-success, .btn-primary, .btn-danger {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+		
+ .btn-success, .btn-primary, .btn-danger {
+    background-color: transparent !important;
+    border: 1px solid white;
+    color: white;
 }
+
+/* Change background color on hover for Tel and Email buttons */
+.btn-success:hover {
+    background-color: #128c7e !important; /* Dark green color on hover for Tel */
+}
+
+.btn-primary:hover {
+    background-color: #007bff !important; /* Dark blue color on hover for Email */
+}
+
+.btn-danger:hover {
+    background-color: #dc3545 !important; /* Dark red color on hover for YouTube */
+}
+
+.contact-btn {
+    background-color: transparent !important;
+    border: 1px solid white;
+    color: white;
+    margin-right: 10px; /* Add some space between buttons */
+}
+
+.contact-btn:hover {
+    background-color: #128c7e !important; /* Dark green color on hover */
+}
+
+.contact-options {
+    margin-bottom: 20px; /* Add some space below the buttons */
+}
+
+.call-us-btn {
+    background-color: transparent !important;
+    border: 1px solid white;
+    color: white;
+}
+
+.call-us-btn:hover {
+    background-color: #007bff !important; /* Same as the logo color */
+}
+
+.youtube-btn {
+    background-color: transparent !important;
+    border: 1px solid white;
+    color: white;
+}
+
+.youtube-btn:hover {
+    background-color: #FF0000 !important; /* YouTube Red color */
+}
+
+.email-btn {
+    background-color: transparent !important;
+    border: 1px solid white;
+    color: white;
+}
+
+.email-btn:hover {
+    background-color: #0b2361 !important; /* Contact Us background color */
+}
+
+
+
     </style>
 </head>
 <body>
 
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-  <a class="navbar-brand" href="#">
-    <img src="img/logo.png" alt="SKY Properties Logo" height="50">
+  <a class="navbar-brand" href="index.html">
+    <img src="img/logo.png" alt="SKY Properties Logo">
     SKY Properties
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,7 +183,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#home">Home</a>
+        <a class="nav-link" href="index.html">Home</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#about">About</a>
@@ -122,7 +220,7 @@
 <section id="about" class="py-5">
   <div class="container">
     <h2 class="text-center">About SKY Properties</h2>
-     <p>SKY Properties was established in 2019, specializing in buying, selling and leasing properties. We have a team of property consultants with high professionalism and extensive experience over 20 years in the real estate market, whether in Re-Sale, Off-Plan or Property Management & Leasing. Our principles start with credibility and transparency and do not end with quality. We always strive to understand customer requirements, study the market very carefully, build trust and create a long-term relationship. Happy To Serve You</p>
+    <p>SKY Properties was established in 2019, specializing in buying, selling and leasing properties. We have a team of property consultants with high professionalism and extensive experience over 20 years in the real estate market, whether in Re-Sale, Off-Plan or Property Management & Leasing. Our principles start with     credibility and transparency and do not end with quality. We always strive to understand customer requirements, study the market very carefully, build trust and create a long-term relationship. Happy To Serve You</p>
   </div>
 </section>
 
@@ -136,8 +234,7 @@
         <p>If you are planning to buy a property in Dubai, we at SKY Properties search for the best opportunities and options that suit your aspirations, offer you the best solutions, and provide you with a feasibility study for your investment. All this without any charges. Do not hesitate to contact us ... Your Property Consultant from SKY Properties is waiting for your action.</p>
       </div>
       <div class="col-md-6">
-        <h4>Selling a Property
-      </h4>
+        <h4>Selling a Property</h4>
         <p>If you want to sell your property, SKY Properties is pleased to provide you with the best marketing services in order to reach the largest segment of clients to ensure that you will get the best deal. We work with high professionalism, transparency, and credibility. We are working for your comfort and benefit. Call now to feel the quality of our work. Your Property Consultant from SKY Properties is waiting for your call.</p>
       </div>
     </div>
@@ -158,17 +255,27 @@
 <section id="contact" class="py-5">
   <div class="container">
     <h2 class="text-center">Contact Us</h2>
-    <p class="lead text-center">Get in touch with us via WhatsApp, email, or follow us on YouTube.</p>
-    <div class="text-center">
-      <a href="https://wa.me/yourphonenumber" class="btn btn-success">
+    <p class="lead text-center">Get in touch with us via WhatsApp, email, phone, or visit us at our office.</p>
+    <div class="contact-options text-center">
+	
+	<a href="tel:+97141234567" class="btn btn-danger contact-btn call-us-btn">
+        <img src="img/phone-logo.png" alt="Phone Logo" height="20"> Call Us
+      </a>
+      <a href="https://wa.me/971505749942" class="btn btn-success contact-btn">
         <img src="img/whatsapp-logo.png" alt="WhatsApp Logo" height="20"> Chat with us on WhatsApp
       </a>
-      <a href="mailto:info@skyproperty.com" class="btn btn-primary">
+	  
+      <a href="mailto:sales@skyproperties.ae" class="btn btn-primary contact-btn email-btn">
         <img src="img/email-logo.png" alt="Email Logo" height="20"> Email Us
       </a>
-      <a href="https://www.youtube.com/channel/yourchannel" class="btn btn-danger">
+      
+      <a href="https://www.youtube.com/@skypropertiesdubai" class="btn btn-info contact-btn youtube-btn"">
         <img src="img/youtube-logo.png" alt="YouTube Logo" height="20"> Watch on YouTube
       </a>
+    </div>
+
+    <div class="map-container mt-4">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.3953209719365!2d55.3300531!3d25.2578291!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5d0c0a144851%3A0xb74ba5ddabcfecb4!2sTen%20Properties%20LLC%20-%20Head%20Office!5e0!3m2!1sen!2sae!4v1685580359729!5m2!1sen!2sae" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
     </div>
   </div>
 </section>
@@ -186,3 +293,4 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+

@@ -1,0 +1,115 @@
+
+/* Your existing styles */
+        .navbar-custom {
+            background: linear-gradient(to right, #ffffff, #0b2361); /* Gradient from white to dark blue */
+        }
+        .navbar-custom .navbar-brand, 
+        .navbar-custom .navbar-nav .nav-link {
+            color: #0b2361; /* Dark blue text for navbar items */
+        }
+        .navbar-custom .navbar-toggler {
+            border-color: #0b2361; /* Dark blue border for the toggler */
+        }
+        .navbar-custom .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%230b2361' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+        }
+        .navbar-custom .navbar-brand img {
+            height: 50px; /* Logo height */
+        }
+        body {
+            background-color: #f4f4f9; /* Light grey background for the body */
+        }
+        #about {
+            background-color: #ffffff; /* White background for the About section */
+            color: #0b2361; /* Dark blue text for the About section */
+            line-height: 1.6; /* Line spacing for the About section */
+            text-align: justify; /* Justify text */
+        }
+        #services {
+            background-color: #e9ecef; /* Light grey background for the Services section */
+            margin-top: 20px; /* Space between sections */
+            text-align: justify; /* Justify text */
+        }
+        #services h4 {
+            color: #0b2361; /* Dark blue color for service titles */
+        }
+        #services p {
+            color: #0b2361; /* Dark blue text for service descriptions */
+            line-height: 1.6; /* Line spacing for service descriptions */
+        }
+        #contact {
+            background-color: #0b2361; /* Dark blue background for the Contact section */
+            color: white; /* White text for the Contact section */
+            padding: 40px 0;
+        }
+        .map-container {
+            position: relative;
+            padding-bottom: 40%; /* Increased height for the map */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .contact-info h3 {
+            margin-bottom: 15px; /* Adjust as needed */
+        }
+        .contact-info p {
+            margin-bottom: 10px; /* Adjust as needed */
+        }
+        .contact-info span {
+            display: inline-block;
+        }
+        footer {
+            background-color: #0b2361; /* Dark blue background for the footer */
+            color: white; /* White text for the footer */
+            padding: 20px 0;
+        }
+        .navbar-custom .navbar-brand img {
+            height: 75px; /* Increase the height of the logo */
+        }
+        .carousel-item img {
+            width: 100%;
+            height: auto; /* Auto height for the images */
+            object-fit: cover; /* Ensures the image covers the entire area of the slider */
+        }
+        .btn-success, .btn-primary, .btn-danger, .btn-info {
+            background-color: transparent;
+            border: 1px solid white;
+            color: white;
+        }
+        .btn-success:hover {
+            background-color: #128c7e !important; /* Dark green color on hover for WhatsApp */
+        }
+        .btn-primary:hover {
+            background-color: #007bff !important; /* Dark blue color on hover for Email */
+        }
+        .btn-danger:hover {
+            background-color: #17a2b8 !important; /* Dark red color on hover for Call */
+        }
+        .btn-info:hover {
+            background-color: #dc3545 !important; /* Dark teal color on hover for YouTube */
+        }
+        .contact-btn {
+            margin-right: 10px; /* Add some space between buttons */
+            margin-bottom: 10px; /* Add some space below each button for proper spacing */
+        }
+        .service-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .service-item img {
+            margin-right: 15px;
+        }

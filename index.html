@@ -1,303 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - SKY Properties</title>
     <!-- Link to Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
- 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
- 
-	    <style>
-
-/* Your existing styles */
-        .navbar-custom {
-            background: linear-gradient(to right, #ffffff, #0b2361); /* Gradient from white to dark blue */
-        }
-        .navbar-custom .navbar-brand, 
-        .navbar-custom .navbar-nav .nav-link {
-            color: #0b2361; /* Dark blue text for navbar items */
-        }
-        .navbar-custom .navbar-toggler {
-            border-color: #0b2361; /* Dark blue border for the toggler */
-        }
-        .navbar-custom .navbar-toggler-icon {
-            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%230b2361' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-        }
-        .navbar-custom .navbar-brand img {
-            height: 50px; /* Logo height */
-        }
-        body {
-            background-color: #f4f4f9; /* Light grey background for the body */
-        }
-        #about {
-            background-color: #ffffff; /* White background for the About section */
-            color: #0b2361; /* Dark blue text for the About section */
-            line-height: 1.6; /* Line spacing for the About section */
-            text-align: justify; /* Justify text */
-        }
-        #services {
-            background-color: #e9ecef; /* Light grey background for the Services section */
-            margin-top: 20px; /* Space between sections */
-            text-align: justify; /* Justify text */
-        }
-        #services h4 {
-            color: #0b2361; /* Dark blue color for service titles */
-        }
-        #services p {
-            color: #0b2361; /* Dark blue text for service descriptions */
-            line-height: 1.6; /* Line spacing for service descriptions */
-        }
-        #contact {
-            background-color: #0b2361; /* Dark blue background for the Contact section */
-            color: white; /* White text for the Contact section */
-            padding: 40px 0;
-        }
-        .map-container {
-            position: relative;
-            padding-bottom: 40%; /* Increased height for the map */
-            height: 0;
-            overflow: hidden;
-            max-width: 100%;
-            border-radius: 8px;
-            margin-top: 20px;
-        }
-        .map-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 0;
-        }
-        .contact-info {
-            margin-top: 20px;
-        }
-        .contact-info h3 {
-            margin-bottom: 15px; /* Adjust as needed */
-        }
-        .contact-info p {
-            margin-bottom: 10px; /* Adjust as needed */
-        }
-        .contact-info span {
-            display: inline-block;
-        }
-        footer {
-            background-color: #0b2361; /* Dark blue background for the footer */
-            color: white; /* White text for the footer */
-            padding: 20px 0;
-        }
-        .navbar-custom .navbar-brand img {
-            height: 75px; /* Increase the height of the logo */
-        }
-        .carousel-item img {
-            width: 100%;
-            height: auto; /* Auto height for the images */
-            object-fit: cover; /* Ensures the image covers the entire area of the slider */
-        }
-        .btn-success, .btn-primary, .btn-danger, .btn-info {
-            background-color: transparent;
-            border: 1px solid white;
-            color: white;
-        }
-        .btn-success:hover {
-            background-color: #128c7e !important; /* Dark green color on hover for WhatsApp */
-        }
-        .btn-primary:hover {
-            background-color: #007bff !important; /* Dark blue color on hover for Email */
-        }
-        .btn-danger:hover {
-            background-color: #17a2b8 !important; /* Dark red color on hover for Call */
-        }
-        .btn-info:hover {
-            background-color: #dc3545 !important; /* Dark teal color on hover for YouTube */
-        }
-        .contact-btn {
-            margin-right: 10px; /* Add some space between buttons */
-            margin-bottom: 10px; /* Add some space below each button for proper spacing */
-        }
-        .service-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .service-item img {
-            margin-right: 15px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/webStyle.css">
 </head>
+
 <body>
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
-  <a class="navbar-brand" href="index.html">
-    <img src="img/logo.png" alt="SKY Properties Logo">
-    SKY Properties
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html" onclick="closeNavbar()">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#about" onclick="closeNavbar()">About</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#services" onclick="closeNavbar()">Services</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#contact" onclick="closeNavbar()">Contact Us</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<!-- Adjusted margin for the fixed navbar -->
-<div style="margin-top: 80px;"></div>
-
-<!-- Slider -->
-<div id="slider" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="img/1.jpg" class="d-block w-100" alt="Slide 1">
-    </div>
-    <div class="carousel-item">
-      <img src="img/2.jpg" class="d-block w-100" alt="Slide 2">
-    </div>
-    <div class="carousel-item">
-      <img src="img/3.jpg" class="d-block w-100" alt="Slide 3">
-    </div>
-  </div>
-</div>
-
-<!-- About Us Section -->
-<section id="about" class="py-5">
-  <div class="container">
-    <h2 class="text-center">About SKY Properties</h2>
-    <p>SKY Properties was established in 9, specializing in buying, selling and leasing properties. We have a team of property consultants with high professionalism and extensive experience over 20 years in the real estate market, whether in Re-Sale, Off-Plan or Property Management & Leasing. Our principles start with credibility and transparency and do not end with quality. We always strive to understand customer requirements, study the market very carefully, build trust and create a long-term relationship. Happy To Serve You</p>
-  </div>
-</section>
-
-<!-- Services Section -->
-<!-- Services Section -->
-<section id="services" class="bg-light py-5">
-  <div class="container">
-    <h2 class="text-center">Our Services</h2>
-    <div class="row mt-4">
-      <div class="col-md-6">
-        <h4><i style="color: #0b2361;" class="fas fa-home"></i> Buying a Property</h4>
-        <p>If you are planning to buy a property in Dubai, we at SKY Properties search for the best opportunities and options that suit your aspirations, offer you the best solutions, and provide you with a feasibility study for your investment. All this without any charges. Do not hesitate to contact us ... Your Property Consultant from SKY Properties is waiting for your action.</p>
-      </div>
-      <div class="col-md-6">
-        <h4><i class="fas fa-handshake"></i> Selling a Property</h4>
-        <p>If you want to sell your property, SKY Properties is pleased to provide you with the best marketing services in order to reach the largest segment of clients to ensure that you will get the best deal. We work with high professionalism, transparency, and credibility. We are working for your comfort and benefit. Call now to feel the quality of our work. Your Property Consultant from SKY Properties is waiting for your call.</p>
-      </div>
-    </div>
-    <div class="row mt-4">
-      <div class="col-md-6">
-        <h4><i class="fas fa-key"></i> Renting a New Home</h4>
-        <p>If you are planning to move to Dubai, or want to change your home, we can help you find the best options available. Contact us now, your Property Consultant from SKY Properties will offer you multiple options suitable for your budget.</p>
-      </div>
-      <div class="col-md-6">
-        <h4><i class="fas fa-building"></i> Property Management</h4>
-        <p>We at SKY Properties manage all types of properties in Dubai. We take care of your property and find the best tenants. We have a specialized team for preparing lease agreements and handing over the property to the tenant. Take peace of mind, just contact your property consultant from SKY Properties and you will find the best services ever.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Us Section -->
-<section id="contact" class="py-5">
-  <div class="container">
-    <h2 class="text-center">Contact Us</h2>
-    <p class="lead text-center">Get in touch with us via WhatsApp, email, phone, or visit us at our office.</p>
-    <div class="row">
-      <!-- Left side: Contact Information -->
-      <div class="col-md-6">
-        <div class="contact-info">
-          <h3>Contact Information</h3>
-          <p><strong>Address:</strong> Makateb Building, office 906.</p>
-          <p><strong>Tel:</strong> 04-2341010</p>
-          <p><strong>Email:</strong> sales@skyproperties.ae</p>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="SKY Properties Logo">
+            SKY Properties
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a id="home-link" class="nav-link" href="#slider" onclick="closeNavbar()">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a id="about-link" class="nav-link" href="#about" onclick="closeNavbar()">About</a>
+                </li>
+                <li class="nav-item">
+                    <a  id="services-link" class="nav-link" href="#services" onclick="closeNavbar()">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a  id="contact-link" class="nav-link" href="#contact" onclick="closeNavbar()">Contact Us</a>
+                </li>
+            </ul>
+            <!-- Language Switcher -->
+            <div class="language-switcher">
+                <button id="language-switcher-btn" class="btn btn-primary">English</button>
+            </div>
         </div>
-      </div>
-      
-      <!-- Right side: Map and Contact Options -->
-      <div class="col-md-6">
-        <div class="map-container">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14460.67273056075!2d55.370214!3d25.2597268!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5dc6c09a924d%3A0xce35411d1dcd7a59!2sSKY%20Properties!5e0!3m2!1sen!2sae!4v1685580359729!5m2!1sen!2sae" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    </nav>
+
+    <!-- Adjusted margin for the fixed navbar -->
+    <div style="margin-top: 80px;"></div>
+
+    <!-- Slider -->
+    <div id="slider" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/1.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="img/2.jpg" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="img/3.jpg" class="d-block w-100" alt="Slide 3">
+            </div>
         </div>
-        
-        <!-- Contact Options -->
-        <div class="row mt-4">
-          <div class="col-md-6 mb-2">
-            <a href="tel:+971412341010" class="btn btn-danger btn-block contact-btn call-us-btn">
-              <img src="img/phone-logo.png" alt="Phone Logo" height="20"> Call Us
-            </a>
-          </div>
-          <div class="col-md-6 mb-2">
-            <a href="https://wa.me/971505749942" class="btn btn-success btn-block contact-btn">
-              <img src="img/whatsapp-logo.png" alt="WhatsApp Logo" height="20"> WhatsApp
-            </a>
-          </div>
-          <div class="col-md-6 mb-2">
-            <a href="mailto:sales@skyproperties.ae" class="btn btn-primary btn-block contact-btn email-btn">
-              <img src="img/email-logo.png" alt="Email Logo" height="20"> Email Us
-            </a>
-          </div>
-          <div class="col-md-6 mb-2">
-            <a href="https://www.youtube.com/@skypropertiesdubai" class="btn btn-info btn-block contact-btn youtube-btn">
-              <img src="img/youtube-logo.png" alt="YouTube Logo" height="20"> Watch on YouTube
-            </a>
-          </div>
+    </div>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center" id="about-title">About SKY Properties</h2>
+            <p id="about-text">SKY Properties was established in 9, specializing in buying, selling and leasing
+                properties. We have a
+                team of property consultants with high professionalism and extensive experience over 20 years in the
+                real estate market, whether in Re-Sale, Off-Plan or Property Management & Leasing. Our principles start
+                with credibility and transparency and do not end with quality. We always strive to understand customer
+                requirements, study the market very carefully, build trust and create a long-term relationship. Happy To
+                Serve You</p>
         </div>
-      </div>
-    </div>
-    <!-- Line between left and right sides -->
-    <div class="col-md-12">
-      <hr>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- Footer -->
-<footer class="bg-dark text-white text-center py-4">
-  <div class="container">
-    <p>&copy; 2024 SKY Properties</p>
-  </div>
-</footer>
+    <!-- Services Section -->
+    <section id="services" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center" id="services-title">Our Services</h2>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h4><i style="color: #0b2361;" class="fas fa-home"></i> Buying a Property</h4>
+                    <p>If you are planning to buy a property in Dubai, we at SKY Properties search for the best
+                        opportunities and options that suit your aspirations, offer you the best solutions, and provide
+                        you with a feasibility study for your investment. All this without any charges. Do not hesitate
+                        to contact us ... Your Property Consultant from SKY Properties is waiting for your action.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <h4><i class="fas fa-handshake"></i> Selling a Property</h4>
+                    <p>If you want to sell your property, SKY Properties is pleased to provide you with the best
+                        marketing services in order to reach the largest segment of clients to ensure that you will get
+                        the best deal. We work with high professionalism, transparency, and credibility. We are
+                        working for your comfort and benefit. Call now to feel the quality of our work. Your Property
+                        Consultant from SKY Properties is waiting for your call.</p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-6">
+                    <h4><i class="fas fa-key"></i> Renting a New Home</h4>
+                    <p>If you are planning to move to Dubai, or want to change your home, we can help you find the best
+                        options available. Contact us now, your Property Consultant from SKY Properties will offer you
+                        multiple options suitable for your budget.</p>
+                </div>
+                <div class="col-md-6">
+                    <h4><i class="fas fa-building"></i> Property Management</h4>
+                    <p>We at SKY Properties manage all types of properties in Dubai. We take care of your property and
+                        find the best tenants. We have a specialized team for preparing lease agreements and handing over
+                        the property to the tenant. Take peace of mind, just contact your property consultant from SKY
+                        Properties and you will find the best services ever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Link to Bootstrap JS and jQuery -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Contact Us Section -->
+    <section id="contact" class="py-5">
+        <div class="container">
+            <h2 class="text-center" id="contact-title">Contact Us</h2>
+            <p class="lead text-center">Get in touch with us via WhatsApp, email, phone, or visit us at our office.
+            </p>
+            <div class="row">
+                <!-- Left side: Contact Information -->
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h3>Contact Information</h3>
+                        <p><strong>Address:</strong> Makateb Building, office 906.</p>
+                        <p><strong>Tel:</strong> 04-2341010</p>
+                        <p><strong>Email:</strong> sales@skyproperties.ae</p>
+                    </div>
+                </div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var offsetHeight = document.querySelector('.navbar').offsetHeight;
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                var target = document.querySelector(this.getAttribute('href'));
-                window.scrollTo({
-                    top: target.offsetTop - offsetHeight,
-                    behavior: 'smooth'
+                <!-- Right side: Map and Contact Options -->
+                <div class="col-md-6">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14460.67273056075!2d55.370214!3d25.2597268!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5dc6c09a924d%3A0xce35411d1dcd7a59!2sSKY%20Properties!5e0!3m2!1sen!2sae!4v1685580359729!5m2!1sen!2sae"
+                            frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+
+                    <!-- Contact Options -->
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-2">
+                            <a href="tel:+971412341010" class="btn btn-danger btn-block contact-btn call-us-btn">
+                                <img src="img/phone-logo.png" alt="Phone Logo" height="20"> Call Us
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <a href="https://wa.me/971505749942" class="btn btn-success btn-block contact-btn">
+                                <img src="img/whatsapp-logo.png" alt="WhatsApp Logo" height="20"> WhatsApp
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <a href="mailto:sales@skyproperties.ae" class="btn btn-primary btn-block contact-btn email-btn">
+                                <img src="img/email-logo.png" alt="Email Logo" height="20"> Email Us
+                            </a>
+                        </div>
+                        <div class="col-md-6 mb-2">
+                            <a href="https://www.youtube.com/@skypropertiesdubai"
+                                class="btn btn-info btn-block contact-btn youtube-btn">
+                                <img src="img/youtube-logo.png" alt="YouTube Logo" height="20"> Watch on YouTube
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Line between left and right sides -->
+            <div class="col-md-12">
+                <hr>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 SKY Properties</p>
+        </div>
+    </footer>
+
+    <!-- Link to Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to toggle language between English and Arabic
+            function toggleLanguage() {
+                var languageBtn = document.getElementById('language-switcher-btn');
+                if (languageBtn.textContent === 'English') {
+                    // Change to Arabic
+                    languageBtn.textContent = 'عربي';
+                    // Replace English content with Arabic content
+                    replaceContentWithArabic();
+                } else {
+                    // Change to English
+                    languageBtn.textContent = 'English';
+                    // Restore English content
+                    restoreEnglishContent();
+                }
+            }
+
+            // Function to replace English content with Arabic content
+            function replaceContentWithArabic() {
+                // Replace text content with Arabic
+                document.getElementById('about-title').textContent = 'حول SKY Properties';
+                document.getElementById('about-text').textContent = 'تأسست SKY Properties في عام 9، متخصصة في شراء وبيع وتأجير العقارات. لدينا فريق من مستشاري العقارات ذوي الكفاءة العالية والخبرة الواسعة لأكثر من 20 عامًا في سوق العقارات، سواء كان ذلك في إعادة البيع، أو الخطة، أو إدارة العقارات والإيجار. تبدأ مبادئنا بالمصداقية والشفافية ولا تنتهي بالجودة. نحن نسعى دائمًا لفهم متطلبات العملاء، ودراسة السوق بعناية فائقة، وبناء الثقة، وإنشاء علاقة طويلة الأمد. سعداء بخدمتك';
+                document.getElementById('services-title').textContent = 'خدماتنا';
+                document.getElementById('contact-title').textContent = 'اتصل بنا';
+		 
+				  document.getElementById('home-link').textContent = 'الصفحة الرئيسية';
+        document.getElementById('about-link').textContent = 'حول';
+        document.getElementById('services-link').textContent = 'خدمات';
+        document.getElementById('contact-link').textContent = 'اتصل بنا';
+            }
+
+            // Function to restore English content
+            function restoreEnglishContent() {
+                // Restore original text content in English
+                document.getElementById('about-title').textContent = 'About SKY Properties';
+                document.getElementById('about-text').textContent = 'SKY Properties was established in 9, specializing in buying, selling and leasing properties. We have a team of property consultants with high professionalism and extensive experience over 20 years in the real estate market, whether in Re-Sale, Off-Plan or Property Management & Leasing. Our principles start with credibility and transparency and do not end with quality. We always strive to understand customer requirements, study the market very carefully, build trust and create a long-term relationship. Happy To Serve You';
+                document.getElementById('services-title').textContent = 'Our Services';
+                document.getElementById('contact-title').textContent = 'Contact Us';
+				
+				document.getElementById('home-link').textContent = 'Home';
+				document.getElementById('about-link').textContent = 'About';
+				document.getElementById('services-link').textContent = 'Services';
+				document.getElementById('contact-link').textContent = 'Contact Us';
+            }
+
+            // Attach event listener to language switcher button
+            document.getElementById('language-switcher-btn').addEventListener('click', toggleLanguage);
+
+            var offsetHeight = document.querySelector('.navbar').offsetHeight;
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var target = document.querySelector(this.getAttribute('href'));
+                    window.scrollTo({
+                        top: target.offsetTop - offsetHeight,
+                        behavior: 'smooth'
+                    });
                 });
             });
         });
-    });
-	function closeNavbar() {
-    var navbarToggler = document.querySelector('.navbar-toggler');
-    var navbarCollapse = document.querySelector('.navbar-collapse');
-    if (navbarToggler && navbarCollapse.classList.contains('show')) {
-      navbarToggler.click();
-    }
-  }
-</script>
-</body>
-</html>
 
+        function closeNavbar() {
+            var navbarToggler = document.querySelector('.navbar-toggler');
+            var navbarCollapse = document.querySelector('.navbar-collapse');
+            if (navbarToggler && navbarCollapse.classList.contains('show')) {
+                navbarToggler.click();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
